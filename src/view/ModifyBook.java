@@ -22,39 +22,39 @@ import database.Book;
 import database.FindBook;
 
 public class ModifyBook extends JFrame{
-	// Ãæ°å
+	// é¢æ¿
 	private JPanel jPanel = new JPanel();
-	// ±êÇ©
-	private JLabel jLabel = new JLabel("ĞŞ¸ÄÍ¼ÊéĞÅÏ¢");
-	private JLabel jLabel2 = new JLabel("Àà  ±ğ£º");
-	private JLabel jLabel3 = new JLabel("Êé  Ãû£º");
-	private JLabel jLabel4 = new JLabel("×÷  Õß£º");
-	private JLabel jLabel5 = new JLabel("³ö°æÉç£º");
-	private JLabel jLabel6 = new JLabel("×´  Ì¬£º");
-	private JLabel jLabel7 = new JLabel("Êé  ºÅ£º");
-	// ÎÄ±¾¿ò
+	// æ ‡ç­¾
+	private JLabel jLabel = new JLabel("ä¿®æ”¹å›¾ä¹¦ä¿¡æ¯");
+	private JLabel jLabel2 = new JLabel("ç±»  åˆ«ï¼š");
+	private JLabel jLabel3 = new JLabel("ä¹¦  åï¼š");
+	private JLabel jLabel4 = new JLabel("ä½œ  è€…ï¼š");
+	private JLabel jLabel5 = new JLabel("å‡ºç‰ˆç¤¾ï¼š");
+	private JLabel jLabel6 = new JLabel("çŠ¶  æ€ï¼š");
+	private JLabel jLabel7 = new JLabel("ä¹¦  å·ï¼š");
+	// æ–‡æœ¬æ¡†
 	private JTextField field = new JTextField(20);
 	private JTextField field2 = new JTextField(20);
 	private JTextField field3 = new JTextField(20);
 	private JTextField field4 = new JTextField(20);
-	// ÏÂÀ­¿ò
+	// ä¸‹æ‹‰æ¡†
 	private JComboBox<String> box = new JComboBox<String>();
 	private JComboBox<String> box1 = new JComboBox<String>();
-	// °´Å¥
-	private JButton button = new JButton("È·¶¨");
-	// ×ÖÌå
-	private Font font = new Font("ËÎÌå", Font.BOLD, 40);
-	private Font font2 = new Font("ËÎÌå", Font.BOLD, 25);
-	private Font font3 = new Font("ËÎÌå", Font.BOLD, 20);
+	// æŒ‰é’®
+	private JButton button = new JButton("ç¡®å®š");
+	// å­—ä½“
+	private Font font = new Font("å®‹ä½“", Font.BOLD, 40);
+	private Font font2 = new Font("å®‹ä½“", Font.BOLD, 25);
+	private Font font3 = new Font("å®‹ä½“", Font.BOLD, 20);
 	
-	// ±í¸ñ   ÓÃÓÚ¸üĞÂÍ¼ÊéËÑË÷½çÃæµÄ±í¸ñ
+	// è¡¨æ ¼   ç”¨äºæ›´æ–°å›¾ä¹¦æœç´¢ç•Œé¢çš„è¡¨æ ¼
 	public DefaultTableModel model = new DefaultTableModel();
 		
 	private String s;
 	private String s1;
 
 	public ModifyBook() {
-		// ¸Ä±ä±³¾°Í¼Æ¬
+		// æ”¹å˜èƒŒæ™¯å›¾ç‰‡
 		Icon i = new ImageIcon("img\\admintop.jpg");
 		JLabel Label = new JLabel(i);
 		Label.setBounds(0, 0, 580, 100);
@@ -62,7 +62,7 @@ public class ModifyBook extends JFrame{
 		setSize(580, 650);
 		setLocationRelativeTo(null);
 		
-		setTitle("ĞŞ¸ÄÍ¼ÊéĞÅÏ¢");
+		setTitle("ä¿®æ”¹å›¾ä¹¦ä¿¡æ¯");
 
 		jLabel.setFont(font);
 		jLabel.setBounds(155, 80, 400, 100);
@@ -84,24 +84,24 @@ public class ModifyBook extends JFrame{
 		
 		jLabel6.setFont(font2);
 		jLabel6.setBounds(125, 450, 250, 30);
-		// ÏÂÀ­¿ò
-		box.addItem("ÇëÑ¡ÔñÀà±ğ");
+		// ä¸‹æ‹‰æ¡†
+		box.addItem("è¯·é€‰æ‹©ç±»åˆ«");
 		Book.findcategory(box);
 		box.setFont(font3);
 		box.setBounds(245, 250, 200, 30);
 		// box.setBackground(Color.cyan);
 		box.setOpaque(false);
 		
-		// ÏÂÀ­¿ò
-		box1.addItem("ÔÚ¹İ");
-		box1.addItem("Íâ½è");
-		Book.findcategory(box);
+		// ä¸‹æ‹‰æ¡†
+		box1.addItem("åœ¨é¦†");
+		box1.addItem("å¤–å€Ÿ");
+		//Book.findcategory(box);
 		box1.setFont(font3);
 		box1.setBounds(245, 450, 200, 30);
 		// box.setBackground(Color.cyan);
 		box1.setOpaque(false);
 
-		// ÎÄ±¾¿ò
+		// æ–‡æœ¬æ¡†
 		field4.setFont(font3);
 		field4.setBackground(Color.cyan);
 		field4.setBounds(245, 200, 200, 30);
@@ -122,7 +122,7 @@ public class ModifyBook extends JFrame{
 		field3.setBounds(245, 400, 200, 30);
 		field3.setOpaque(false);
 
-		// °´Å¥
+		// æŒ‰é’®
 		button.setFont(font2);
 		button.setBounds(120, 510, 325, 35);
 		button.setBackground(Color.cyan);
@@ -149,7 +149,7 @@ public class ModifyBook extends JFrame{
 		jPanel.setBounds(0, 0, 850, 650);
 		jPanel.setOpaque(false);
 		jPanel.setLayout(null);
-		// ²»¿ÉÒÔ¸Ä±ä´°ÌåµÄ´óĞ¡
+		// ä¸å¯ä»¥æ”¹å˜çª—ä½“çš„å¤§å°
 		setResizable(false);
 		add(jPanel);
 		add(Label);
@@ -161,8 +161,8 @@ public class ModifyBook extends JFrame{
 	}
 	
 	private void add() {
-		//»ñÈ¡ÏÂÀ­ÁĞ±íÖµ
-		s = "ÇëÑ¡ÔñÀà±ğ";
+		//è·å–ä¸‹æ‹‰åˆ—è¡¨å€¼
+		s = "è¯·é€‰æ‹©ç±»åˆ«";
 		box.addItemListener(new ItemListener() {
 			
 			@Override
@@ -174,8 +174,8 @@ public class ModifyBook extends JFrame{
 			}
 		});
 		
-		//»ñÈ¡ÏÂÀ­ÁĞ±íÖµ
-		s1 = "ÔÚ¹İ";
+		//è·å–ä¸‹æ‹‰åˆ—è¡¨å€¼
+		s1 = "åœ¨é¦†";
 		box1.addItemListener(new ItemListener() {
 			
 			@Override
@@ -187,7 +187,7 @@ public class ModifyBook extends JFrame{
 			}
 		});
 				
-		//Ìí¼ÓËÑË÷°´Å¥ÊÂ¼ş
+		//æ·»åŠ æœç´¢æŒ‰é’®äº‹ä»¶
 		button.addActionListener(new ActionListener() {
 			
 			@Override
@@ -201,9 +201,9 @@ public class ModifyBook extends JFrame{
 					Book.modifybook(bookid, s, bookname, author, press, s1);
 					model.setRowCount(0);
 					FindBook.allbook(model);
-					JOptionPane.showMessageDialog(null, "²Ù×÷³É¹¦");
+					JOptionPane.showMessageDialog(null, "æ“ä½œæˆåŠŸ");
 				}catch(Exception e1){
-					JOptionPane.showMessageDialog(null, "ÊäÈë²»ÕıÈ·", "¾¯¸æ", JOptionPane.WARNING_MESSAGE);
+					JOptionPane.showMessageDialog(null, "è¾“å…¥ä¸æ­£ç¡®", "è­¦å‘Š", JOptionPane.WARNING_MESSAGE);
 				}
 				
 			}
