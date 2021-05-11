@@ -8,7 +8,7 @@ public class ConnectDatabase {
 
 	public static Connection connectDB() {
 
-		String url = "jdbc:mysql:// localhost:3306/mis?serverTimezone=GMT%2B8";
+		String url = "jdbc:mysql://localhost:3306/mis?serverTimezone=GMT%2B8";
 
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
@@ -18,7 +18,7 @@ public class ConnectDatabase {
 		Connection con = null;
 
 		try {
-			con = DriverManager.getConnection(url, "root", "root");
+			con = DriverManager.getConnection(url, "root", "123456");
 		} catch (SQLException e) {
 		}
 
